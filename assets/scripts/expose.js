@@ -20,17 +20,22 @@ function init() {
     if (hornSelector.value == "air-horn") {
       images[0].src = 'assets/images/air-horn.svg';
       audioSounds.src = 'assets/audio/air-horn.mp3';
-    } else if (hornSelector.value == "air-horn") {
+    } else if (hornSelector.value == "car-horn") {
       images[0].src = 'assets/images/car-horn.svg';
       audioSounds.src = 'assets/audio/car-horn.mp3';
+
     } else if (hornSelector.value == "party-horn") {
       images[0].src = 'assets/images/party-horn.svg';
       audioSounds.src = 'assets/audio/party-horn.mp3';
+      executeSound.addEventListener('click', function() {
+        useConfetti.addConfetti();
+        audioSounds.play();
+      });
     }
-  })
+  });
 
   volumeControl.addEventListener('change', function() {
-    audio.volume = audioSounds.value / 100;
+    audio.audioSounds = audioSounds.value / 100;
     if (audioSounds.value == 0) {
       images[1].src = 'assets/icons/volume-level-0.svg';
     } else if (audioSounds.value < 33) {
@@ -40,10 +45,5 @@ function init() {
     } else {
       images[1].src = 'assets/icons/volume-level-3.svg';
     }
-  })
-
-  executeSound.addEventListener('click', function() {
-    useConfetti.addConfetti();
-    audioSounds.play();
-  })
+  });
 }
