@@ -9,7 +9,7 @@ function init() {
   var volumeControl = document.getElementById('volume');
   var hornSelector = document.getElementById('horn-select');
   //Query selector for objects
-  var images = document.querySelector('img');
+  var images = document.querySelectorAll('img');
   var audioSounds = document.querySelector('audio');
   var executeSound = document.querySelector('button');
 
