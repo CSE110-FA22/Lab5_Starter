@@ -16,6 +16,11 @@ function init() {
   //Store as const to use function when party horn is called
   const useConfetti = new JSConfetti();
 
+  hornSelector.addEventListener('change', function() {
+    images.setAttribute("src", `/assets/images/${hornSelector.value}.svg`);
+    audioSounds.setAttribute("src", `/assets/audio/${hornSelector.value}.mp3`);
+  })
+
   volumeControl.addEventListener('change', function() {
     audio.volume = audioSounds.value / 100;
     if (volume == 0) {
@@ -29,24 +34,11 @@ function init() {
     }
   })
 
-  hornSelector.addEventListener('change', function() {
-    if (hornSelector.value == "air-horn") {
-      images[0].src = 'assets/images/air-horn.svg';
-      audioSounds.src = 'assets/audio/air-horn.mp3';
-    } else if (hornSelector.value == "car-horn") {
-      images[1].src = 'assets/images/car-horn.svg';
-      audioSounds.src = 'assets/audio/car-horn.mp3';
-    } else if (hornSelector.value == "party-horn") {
-      img[2].src = 'assets/images/party-horn.svg';
-      audioSounds.src = 'assets/audio/party-horn.mp3';
-    }
-  })
-
   executeSound.addEventListener('change', function() {
     if (hornSelector.value == "party-horn"){
-      useConfetti.addConfetti(); 
+      useConfetti.addConfetti();
     }
 
-    audioSounds.play(); 
+    audioSounds.play();
   })
 }
