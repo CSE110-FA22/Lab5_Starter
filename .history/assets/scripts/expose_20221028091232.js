@@ -46,7 +46,6 @@ volume_slider.addEventListener('change', function(){
   } else {
     volume_img.src = "assets/icons/volume-level-3.svg";
   }
-  audio.volume = volume_slider.value / 100.0;
 });
 function init() {
   // TODO
