@@ -23,14 +23,9 @@ function init() {
     } else if (hornSelector.value == "car-horn") {
       images[0].src = 'assets/images/car-horn.svg';
       audioSounds.src = 'assets/audio/car-horn.mp3';
-
     } else if (hornSelector.value == "party-horn") {
       images[0].src = 'assets/images/party-horn.svg';
       audioSounds.src = 'assets/audio/party-horn.mp3';
-      executeSound.addEventListener('click', function() {
-        useConfetti.addConfetti();
-        audioSounds.play();
-      });
     }
   });
 
@@ -45,5 +40,13 @@ function init() {
     } else {
       images[1].src = 'assets/icons/volume-level-3.svg';
     }
+  });
+
+  executeSound.addEventListener('click', function() {
+    if (hornSelector == "party-horn"){
+      useConfetti.addConfetti();
+    }
+
+    audioSounds.play();
   });
 }
