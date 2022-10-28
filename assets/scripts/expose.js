@@ -19,13 +19,13 @@ function init() {
   volumeControl.addEventListener('change', function() {
     audio.volume = audioSounds.value / 100;
     if (volume == 0) {
-      img[1].src = 'assets/icons/volume-level-0.svg';
+      images[1].src = 'assets/icons/volume-level-0.svg';
     } else if (volume < 33) {
-      img[1].src = 'assets/icons/volume-level-1.svg';
+      images[1].src = 'assets/icons/volume-level-1.svg';
     } else if (volume < 67) {
-      img[1].src = 'assets/icons/volume-level-2.svg';
+      images[1].src = 'assets/icons/volume-level-2.svg';
     } else {
-      img[1].src = 'assets/icons/volume-level-3.svg';
+      images[1].src = 'assets/icons/volume-level-3.svg';
     }
   })
 
