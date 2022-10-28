@@ -31,22 +31,19 @@ function init() {
 
   volumeControl.addEventListener('change', function() {
     audio.volume = audioSounds.value / 100;
-    if (volume == 0) {
+    if (audioSounds.value == 0) {
       images[1].src = 'assets/icons/volume-level-0.svg';
-    } else if (volume < 33) {
+    } else if (audioSounds.value < 33) {
       images[1].src = 'assets/icons/volume-level-1.svg';
-    } else if (volume < 67) {
+    } else if (audioSounds.value < 67) {
       images[1].src = 'assets/icons/volume-level-2.svg';
     } else {
       images[1].src = 'assets/icons/volume-level-3.svg';
     }
   })
 
-  executeSound.addEventListener('change', function() {
-    if (hornSelector.value == "party-horn") {
-      useConfetti.addConfetti();
-    }
-
+  executeSound.addEventListener('click', function() {
+    useConfetti.addConfetti();
     audioSounds.play();
   })
 }
