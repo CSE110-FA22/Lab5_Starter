@@ -1,5 +1,5 @@
 // expose.js
-let jsConfetti = new JSConfetti();
+
 window.addEventListener('DOMContentLoaded', init);
 let selector = document.getElementById("horn-select");
 let horn_image = document.getElementsByTagName('img')[0];
@@ -23,15 +23,12 @@ selector.addEventListener('change', function(){
       horn_image.src = "assets/images/no-image.png";
       audio.src = "";
   }
-  
+  console.log(audio.src);
 
 });
 sound_btn.addEventListener('click', function(){
-  if(selector.value == "party-horn"){
-    console.log(audio.src);
-    jsConfetti.addConfetti();
-  }
-  audio.play();
+  console.log("clicked");
+  audio.play;
 });
 function init() {
   // TODO

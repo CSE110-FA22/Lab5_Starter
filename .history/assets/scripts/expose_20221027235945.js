@@ -1,4 +1,6 @@
 // expose.js
+import JSConfetti from './js-confetti.browser.js';
+let JSConfetti = require("./js-confetti.browser.js");
 let jsConfetti = new JSConfetti();
 window.addEventListener('DOMContentLoaded', init);
 let selector = document.getElementById("horn-select");
