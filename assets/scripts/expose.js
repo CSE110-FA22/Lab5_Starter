@@ -17,8 +17,16 @@ function init() {
   const useConfetti = new JSConfetti();
 
   hornSelector.addEventListener('change', function() {
-    images.setAttribute("src", `/assets/images/${hornSelector.value}.svg`);
-    audioSounds.setAttribute("src", `/assets/audio/${hornSelector.value}.mp3`);
+    if (hornSelector.value == "air-horn") {
+      images[0].src = 'assets/images/air-horn.svg';
+      audioSounds.src = 'assets/audio/air-horn.mp3';
+    } else if (hornSelector.value == "air-horn") {
+      images[0].src = 'assets/images/car-horn.svg';
+      audioSounds.src = 'assets/audio/car-horn.mp3';
+    } else if (hornSelector.value == "party-horn") {
+      images[0].src = 'assets/images/party-horn.svg';
+      audioSounds.src = 'assets/audio/party-horn.mp3';
+    }
   })
 
   volumeControl.addEventListener('change', function() {
@@ -35,7 +43,7 @@ function init() {
   })
 
   executeSound.addEventListener('change', function() {
-    if (hornSelector.value == "party-horn"){
+    if (hornSelector.value == "party-horn") {
       useConfetti.addConfetti();
     }
 
