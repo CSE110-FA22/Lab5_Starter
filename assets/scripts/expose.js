@@ -1,5 +1,7 @@
 // expose.js
 //@ts-check
+//import JSConfetti from 'js-confetti';
+
 window.addEventListener('DOMContentLoaded', init);
 
 function init() {
@@ -43,9 +45,18 @@ function init() {
             audio.src = "assets/audio/air-horn.mp3";
         } else if (selectElement.value == "car-horn") {
             audio.src = "assets/audio/car-horn.mp3";
-
         } else if (selectElement.value == "party-horn") {
             audio.src = "assets/audio/party-horn.mp3";
+
+            const jsConfetti = new JSConfetti();
+            jsConfetti.addConfetti({
+                emojis: ['🌈', '⚡️', '💥', '✨', '💫', '🌸'],
+            });
+            jsConfetti.addConfetti({
+                confettiRadius: 10,
+                confettiNumber: 500,
+            });
+            jsConfetti.addConfetti();
         }
         audio.play();
     }
