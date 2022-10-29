@@ -1,2 +1,2 @@
 # Lab 5 - Starter
-Name: Nathan Ueda\
+Name: Nathan Ueda
