@@ -1,2 +1,2 @@
 # Lab 5 - Starter
-Name: Rena Wu
+Name: Rena Wu, Xinyi Li
