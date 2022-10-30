@@ -8,11 +8,12 @@ var speaker = window.speechSynthesis;
 var voice_select = document.getElementById('voice-select');
 var voices = [];
 
+let utterance = new SpeechSynthesisUtterance();  // The function create an utterance. 
+
 //text_to_speak.value
 button.addEventListener('click', function () {
 
-  let text_to_speak = document.getElementById('text-to-speak');  // Use text_to_speak.value to access the text here. 
-  let utterance = new SpeechSynthesisUtterance(text_to_speak.value);  // The function create an utterance. 
+  utterance.text = document.getElementById('text-to-speak').value;  // Use text_to_speak.value to access the text here. 
   for (let i = 0; i < voices.length; i++){
     if (voice_select.value == voices[i].name) {
       utterance.voice = voices[i];
@@ -20,12 +21,15 @@ button.addEventListener('click', function () {
     }
   }
   
-  if (speaker.speaking) {
-    smile.src = "assets/images/smiling-open.png";
-  } 
-  smile.src = "assets/images/smiling.png";
 });
 
+utterance.addEventListener('start', function () {
+  smile.src = "./assets/images/smiling-open.png";
+});
+
+utterance.addEventListener('end', function () {
+  smile.src = "./assets/images/smiling.png";
+})
 
 function init() {
   
@@ -41,16 +45,7 @@ function populateVoiceList () {
     option.setAttribute("data-name", voices[i].name);
     voice_select.appendChild(option);
   } 
-
-  // voice_select.selectedIndex = selectedIndex;
-  // console.log(voice_select.selectedIndex);
 }
 
 populateVoiceList();
-
 speechSynthesis.onvoiceschanged = populateVoiceList;
-
-function speak(){
-  let text_to_speak = document.getElementById('text-to-speak');  // Use text_to_speak.value to access the text here. 
-  let utterance = new SpeechSynthesisUtterance(text_to_speak.value);  
-}
