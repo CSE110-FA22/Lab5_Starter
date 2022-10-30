@@ -13,7 +13,13 @@ button.addEventListener('click', function () {
 
   let text_to_speak = document.getElementById('text-to-speak');  // Use text_to_speak.value to access the text here. 
   let utterance = new SpeechSynthesisUtterance(text_to_speak.value);  // The function create an utterance. 
-  speaker.speak(utterance); 
+  for (let i = 0; i < voices.length; i++){
+    if (voice_select.value == voices[i].name) {
+      utterance.voice = voices[i];
+      speaker.speak(utterance); 
+    }
+  }
+  
   if (speaker.speaking) {
     smile.src = "assets/images/smiling-open.png";
   } 
@@ -26,16 +32,25 @@ function init() {
 }
 
 function populateVoiceList () {
+  const selectedIndex = voice_select.selectedIndex < 0 ? 0 : voice_select.selectedIndex;
+
   voices = speaker.getVoices();
   for (let i = 0; i < voices.length; i++){
     const option = document.createElement("option");
     option.textContent = `${voices[i].name}`;
+    option.setAttribute("data-name", voices[i].name);
     voice_select.appendChild(option);
-  }  
+  } 
+
+  // voice_select.selectedIndex = selectedIndex;
+  // console.log(voice_select.selectedIndex);
 }
 
 populateVoiceList();
 
 speechSynthesis.onvoiceschanged = populateVoiceList;
 
-
+function speak(){
+  let text_to_speak = document.getElementById('text-to-speak');  // Use text_to_speak.value to access the text here. 
+  let utterance = new SpeechSynthesisUtterance(text_to_speak.value);  
+}
