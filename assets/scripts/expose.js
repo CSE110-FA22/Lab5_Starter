@@ -43,7 +43,7 @@ function init() {
   });
 
   executeSound.addEventListener('click', function() {
-    if (hornSelector == "party-horn"){
+    if (hornSelector.value == "party-horn"){
       useConfetti.addConfetti();
     }
 
