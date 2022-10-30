@@ -8,7 +8,7 @@ function init() {
   //Get element by Id for objects
   var volumeControl = document.getElementById('volume');
   var hornSelector = document.getElementById('horn-select');
-  var volumeIcon = document.querySelector("[alt='Volume level 2']");
+  var volumeIcon = document.querySelector("[alt='Volume-level-2']");
   //Query selector for objects
   var hornImages = document.querySelectorAll('img');
   var audioSounds = document.querySelector('audio');
