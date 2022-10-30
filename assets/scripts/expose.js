@@ -30,24 +30,24 @@ function init() {
     }
   });
 
-  volumeControl.addEventListener('input', function() {
-    if(volumeControl.value == 0){
-       volumeIcon.src = 'assets/icons/volume-level-0.svg';
-       audioSounds.volume = 0;
-    }
-    else if(volumeControl.value < 33){
-      volumeIcon.src = 'assets/icons/volume-level-1.svg';
-      audioSounds.volume = volumeControl.value / 100;
-    }
-    else if(volumeControl.value < 67){
-      volumeIcon.src = 'assets/icons/volume-level-2.svg';
-      audioSounds.volume = volumeControl.value / 100;
-    }
-    else if(volumeControl.value < 100){
-      volumeIcon.src = 'assets/icons/volume-level-3.svg';
-      audioSounds.volume = volumeControl.value / 100;
-    }
-  })
+//   volumeControl.addEventListener('input', function() {
+//     if(volumeControl.value == 0){
+//        volumeIcon.src = 'assets/icons/volume-level-0.svg';
+//        audioSounds.volume = 0;
+//     }
+//     else if(volumeControl.value < 33){
+//       volumeIcon.src = 'assets/icons/volume-level-1.svg';
+//       audioSounds.volume = volumeControl.value / 100;
+//     }
+//     else if(volumeControl.value < 67){
+//       volumeIcon.src = 'assets/icons/volume-level-2.svg';
+//       audioSounds.volume = volumeControl.value / 100;
+//     }
+//     else if(volumeControl.value < 100){
+//       volumeIcon.src = 'assets/icons/volume-level-3.svg';
+//       audioSounds.volume = volumeControl.value / 100;
+//     }
+//   });
 
   executeSound.addEventListener('click', function() {
     if (hornSelector.value == "party-horn"){
