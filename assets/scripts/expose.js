@@ -38,7 +38,8 @@ function init() {
 
   addEventListener('input', (event) =>{
     let volumeValue = event.target.value;
-    selectAudio.volume = volumeValue/ 100;
+    let volumePercentage = volumeValue/ 100;
+    selectAudio.volume = isNaN(volumePercentage)? 0 : volumePercentage;
     if(volumeValue == 0){
       volumeIcon.src = "assets/icons/volume-level-0.svg";
       volumeIcon.alt = "Volume level 0";
@@ -63,7 +64,11 @@ function init() {
   
   //play sound button 
   const playButton = document.querySelector('button');
+  const jsConfetti = new JSConfetti();
   playButton.addEventListener('click', (event) => {
+    if(selectElement.value == "party-horn"){
+      jsConfetti.addConfetti();
+    }
     selectAudio.play();
   });
 }
