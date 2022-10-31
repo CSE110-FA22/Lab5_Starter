@@ -49,3 +49,7 @@ function populateVoiceList () {
 
 populateVoiceList();
 speechSynthesis.onvoiceschanged = populateVoiceList;
+
+// Some code of pupolateVoiceList() function is referenced to the demo code in 
+// Mozilla documentation. 
+// Accessed at: https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis
