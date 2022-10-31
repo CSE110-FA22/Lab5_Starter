@@ -38,17 +38,15 @@ sound_btn.addEventListener('click', function(){
 });
 volume_slider.addEventListener('change', function(){
   if(volume_slider.value == 0){
-    volume_img.src = "assets/icons/volume-level-0.svg";
+
   } else if(volume_slider.value < 33){
-    volume_img.src = "assets/icons/volume-level-1.svg";
+
   } else if(volume_slider.value < 67){
-    volume_img.src = "assets/icons/volume-level-2.svg";
+
   } else {
-    volume_img.src = "assets/icons/volume-level-3.svg";
+
   }
-  audio.volume = volume_slider.value / 100.0;
 });
-
 function init() {
-
+  // TODO
 }

@@ -48,7 +48,6 @@ volume_slider.addEventListener('change', function(){
   }
   audio.volume = volume_slider.value / 100.0;
 });
-
 function init() {
-
+  // TODO
 }
