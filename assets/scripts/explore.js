@@ -36,8 +36,7 @@ function init() {
 }
 
 function populateVoiceList () {
-  const selectedIndex = voice_select.selectedIndex < 0 ? 0 : voice_select.selectedIndex;
-
+  
   voices = speaker.getVoices();
   for (let i = 0; i < voices.length; i++){
     const option = document.createElement("option");
