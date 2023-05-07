@@ -4,10 +4,7 @@ window.addEventListener('DOMContentLoaded', init);
 
 function init() {
   // TODO
-  //let = document.getElementById("expose");
-
-
-
+    //let = document.getElementById("expose");
   var horn = document.getElementById('horn-select');
   var horn_choice = horn.value;
 
