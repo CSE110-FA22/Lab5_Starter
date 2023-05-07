@@ -23,6 +23,7 @@ function init() {
     document.querySelector("#expose audio").src = `./assets/audio/${selectedHorn}.mp3`;
   });
 
+  
 
   //// change the volume on the slider
   const correspondingVolume = document.querySelector("#volume");
