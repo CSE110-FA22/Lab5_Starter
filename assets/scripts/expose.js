@@ -34,6 +34,7 @@ function init() {
   
   
   const volume = document.getElementById("volume");
+  volume.value = 75;
   const elements = document.querySelectorAll("img");
   const icon = elements[1];
   
