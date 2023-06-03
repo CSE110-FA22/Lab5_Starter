@@ -34,8 +34,8 @@ function init() {
   
   
   const volume = document.getElementById("volume");
-  const elements = document.querySelectorAll("img");
-  const icon = elements[1];
+  const div = document.getElementById("volume-controls");
+  const icon = div.querySelector("img");
   
   function ChangeSoundImg(){
     var volumeValue = volume.value;
