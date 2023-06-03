@@ -34,11 +34,10 @@ function init() {
   
   
   const volume = document.getElementById("volume");
-  volume.value = 75;
   const elements = document.querySelectorAll("img");
   const icon = elements[1];
   
-  function audionHelp(){
+  function audioHelp(){
     var volumeValue = volume.value;
     
     var iconPath = "";
