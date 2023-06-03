@@ -52,6 +52,7 @@ function init() {
       iconPath = "assets/icons/volume-level-0.svg";
     }
     
+    icon.source = iconPath;
     volume.value = volumeValue/100;
     
     
