@@ -43,6 +43,7 @@ function init() {
     var iconPath = "";
     
     if (volumeValue >= 1 && volumeValue < 33){
+      console.log("small");
       iconPath = "assets/icons/volume-level-1.svg";
     } else if(volumeValue >=33 && volumeValue < 67){
       iconPath = "assets/icons/volume-level-2.svg";
