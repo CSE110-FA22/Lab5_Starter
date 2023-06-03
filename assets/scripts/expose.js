@@ -37,7 +37,7 @@ function init() {
   const elements = document.querySelectorAll("img");
   const icon = elements[1];
   
-  function audioHelp(){
+  function changeAudioHelp(){
     var volumeValue = volume.value;
     
     var iconPath = "";
@@ -60,7 +60,7 @@ function init() {
     
   }
   
-  volume.addEventListener('change', audioHelp);
+  volume.addEventListener('change', changeAudioHelp);
   
   
   const playButton = document.querySelector("button");
