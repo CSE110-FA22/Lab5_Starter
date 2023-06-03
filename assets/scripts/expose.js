@@ -50,6 +50,8 @@ function init() {
       iconPath = "assets/icons/volume-level-3.svg"
     } else if(volume == 0){
       iconPath = "assets/icons/volume-level-0.svg";
+    } else{
+      iconPath = "";
     }
     
     icon.src = iconPath;
@@ -58,10 +60,11 @@ function init() {
     
   }
   
-  volume.addEventListener('input', audioHelp);
+  volume.addEventListener('change', audioHelp);
   
   
   const playButton = document.querySelector("button");
+  const audio = document.querySelector("audio");
   
   function playAudio(){
     audio.play();
