@@ -61,7 +61,7 @@ function init() {
     
   }
   
-  volume.addEventListener('change', ChangeSoundImg);
+  volume.addEventListener('input', ChangeSoundImg);
   
   
   const playButton = document.querySelector("button");
