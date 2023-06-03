@@ -30,7 +30,7 @@ function init() {
     audio.src = audioPath;
   }
   
-  select.addEventListener('change', ChangeHornImg());
+  select.addEventListener('change', ChangeHornImg);
   
   
   const volume = document.getElementById("volume");
@@ -57,7 +57,22 @@ function init() {
     
   }
   
-  volume.addEventListener('input', audioHelp());
+  volume.addEventListener('input', audioHelp);
+  
+  
+  const playButton = document.querySelector("button");
+  
+  function playAudio(){
+    audio.play();
+    if(audio.source == "assets/audio/party-horn.mp3"){
+      const jsConfetti = new JSConfetti();
+      jsConfetti.addConfetti({
+        emojis: ['🌈', '⚡️', '💥', '✨', '💫', '🌸'],
+          });
+    }
+  }
+  
+  playButton.addEventListner('click', playAudio);
   
     
 }
