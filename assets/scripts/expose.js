@@ -56,7 +56,7 @@ function init() {
     
     icon.src = iconPath;
     volume.value = volumeValue/100;
-    console.log(volume.value)
+    //console.log(volume.value)
     
     
   }
