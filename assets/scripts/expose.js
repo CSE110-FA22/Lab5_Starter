@@ -9,19 +9,21 @@ function init() {
   
   function ChangeHornImg(){
     const selectedOption = select.options[select.selectedIndex];
+    var imagePath = "";
+    var audioPath = "";
     
     if(select.selectedIndex == 1){
-      var imagePath = "assets/images/air-horn.svg";
-      var audioPath = "assets/audio/air-horn.mp3";
+      imagePath = "assets/images/air-horn.svg";
+      audioPath = "assets/audio/air-horn.mp3";
     } else if(select.selectedIndex == 2){
-      var imagePath = "assets/images/car-horn.svg";
-      var audioPath = "assets/audio/car-horn.mp3";
+      imagePath = "assets/images/car-horn.svg";
+      audioPath = "assets/audio/car-horn.mp3";
     } else if(select.selectedIndex == 3){
-      var imagePath = "assets/images/party-horn.svg";
-      var audioPath = "assets/audio/party-horn.mp3";
+      imagePath = "assets/images/party-horn.svg";
+      audioPath = "assets/audio/party-horn.mp3";
     } else {
-      var imagePath = "assets/images/no-image.png";
-      var audioPath = "";
+      imagePath = "assets/images/no-image.png";
+      audioPath = "";
     }
     
     image.src = imagePath;
@@ -32,6 +34,30 @@ function init() {
   
   
   const volume = document.getElementById("volume");
+  const elements = document.querySelectorAll("img");
+  const icon = elements[1];
+  
+  function audionHelp(){
+    var volumeValue = volume.value;
+    
+    var iconPath = "";
+    
+    if (volumeValue >= 1 && volumeValue < 33){
+      iconPath = "assets/icons/volume-level-1.svg";
+    } else if(volumeValue >=33 && volumeValue < 67){
+      iconPath = "assets/icons/volume-level-2.svg";
+    } else if(volumeValue >=67 && volumeValue < 100){
+      iconPath = "assets/icons/volume-level-3.svg"
+    } else if(volume == 0){
+      iconPath = "assets/icons/volume-level-0.svg";
+    }
+    
+    volume.value = volumeValue/100;
+    
+    
+  }
+  
+  volume.addEventListener('input', audioHelp());
   
     
 }
