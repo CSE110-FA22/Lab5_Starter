@@ -77,7 +77,7 @@ function init() {
     //}
   }
   
-  playButton.addEventListner('click', playAudio);
+  playButton.aaddEventListener('click', playAudio);
   
     
 }
