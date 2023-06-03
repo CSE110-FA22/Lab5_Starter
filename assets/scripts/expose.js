@@ -33,7 +33,7 @@ function init() {
   select.addEventListener('change', ChangeHornImg);
   
   
-  const volume = document.getElementById("volume");
+  const volume = document.querySelector("input");
   const div = document.getElementById("volume-controls");
   const icon = div.querySelector("img");
   
