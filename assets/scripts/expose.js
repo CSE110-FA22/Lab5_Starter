@@ -69,12 +69,12 @@ function init() {
   
   function playAudio(){
     audio2.play();
-    if(audio2.source == "assets/audio/party-horn.mp3"){
-      const jsConfetti = new JSConfetti();
-      jsConfetti.addConfetti({
-        emojis: ['🌈', '⚡️', '💥', '✨', '💫', '🌸'],
-          });
-    }
+    //if(audio2.source == "assets/audio/party-horn.mp3"){
+      //const jsConfetti = new JSConfetti();
+      //jsConfetti.addConfetti({
+        //emojis: ['🌈', '⚡️', '💥', '✨', '💫', '🌸'],
+          //});
+    //}
   }
   
   playButton.addEventListner('click', playAudio);
