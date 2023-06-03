@@ -65,11 +65,11 @@ function init() {
   
   
   const playButton = document.querySelector("button");
-  const audio = document.querySelector("audio");
+  const audio2 = document.querySelector("audio");
   
   function playAudio(){
-    audio.play();
-    if(audio.source == "assets/audio/party-horn.mp3"){
+    audio2.play();
+    if(audio2.source == "assets/audio/party-horn.mp3"){
       const jsConfetti = new JSConfetti();
       jsConfetti.addConfetti({
         emojis: ['🌈', '⚡️', '💥', '✨', '💫', '🌸'],
