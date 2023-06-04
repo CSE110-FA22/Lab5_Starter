@@ -4,7 +4,7 @@ window.addEventListener('DOMContentLoaded', init);
 
 function init() {
   // Get reference to the voice select dropdown
-  const voiceSelect = document.getElementById('voiceSelect');
+  const voiceSelect = document.querySelector("select");
 
   // Load available voices when the page is loaded
   window.addEventListener('click', () => {
