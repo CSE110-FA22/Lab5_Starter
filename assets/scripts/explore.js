@@ -29,12 +29,22 @@ function init() {
   
   //smileyFace.addEventListener('click', getVoices);
   
-  const button = document.getElementById("button");
-  const image = document.getElementById("img");
+  const button = document.querySelector("button");
+  const image = document.querySelector("img");
+  const inputText = document.querySelector("textarea");
   
   function talk(){
     image.src = "assets/images/smiling-open.png";
     
+    const utterThis = new SpeechSynthesisUtterance(inputText.value);
+    utterThis.voice = voices[voiceSelect.value];
+    //utterThis.language
+    synth.speak(utterThis);
+    
+    image.src = "assets/images/smiling.png";
+    
   }
+  
+  button.addEventListener('click', talk);
   
 }
