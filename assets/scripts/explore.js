@@ -2,12 +2,12 @@ window.addEventListener('DOMContentLoaded', init);
 
 function init() {
   const synth = window.speechSynthesis;
-  
+ 
   const voiceSelect = document.querySelector("select");
   const smileyFace = document.querySelector("img");
-  
+ 
   let voices = [];
-  
+ 
   function populateVoiceList() {
     voices = synth.getVoices();
 
@@ -26,25 +26,25 @@ function init() {
   }
 
   populateVoiceList();
-  
+ 
   //smileyFace.addEventListener('click', getVoices);
-  
+ 
   const button = document.querySelector("button");
   const image = document.querySelector("img");
   const inputText = document.querySelector("textarea");
-  
+ 
   function talk(){
     image.src = "assets/images/smiling-open.png";
-    
+   
     const utterThis = new SpeechSynthesisUtterance(inputText.value);
     utterThis.voice = voices[voiceSelect.value];
     //utterThis.language
     synth.speak(utterThis);
-    
+   
     image.src = "assets/images/smiling.png";
-    
+   
   }
-  
+ 
   button.addEventListener('click', talk);
-  
+ 
 }
