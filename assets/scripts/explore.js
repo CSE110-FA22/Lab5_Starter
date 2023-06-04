@@ -5,6 +5,7 @@ window.addEventListener('DOMContentLoaded', init);
 function init() {
   
   const voiceSelect = document.querySelector("select");
+  const smileyFace = decument.querySelector("img");
   
   function getVoices(){
     const voices = speechSynthesis.getVoices();
@@ -17,7 +18,7 @@ function init() {
       });
   }
   
-  voiceSelect.addEventListner('click', getVoices);
+  .addEventListner('click', getVoices);
   
   
 }
