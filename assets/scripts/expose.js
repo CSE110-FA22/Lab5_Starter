@@ -65,11 +65,11 @@ function init() {
   
   
   const playButton = document.querySelector("button");
-  const audio2 = document.querySelector("audio");
+  //const audio2 = document.querySelector("audio");
   
   function playAudio(){
-    audio2.play();
-    if(audio2.src == "assets/audio/party-horn.mp3"){
+    audio.play();
+    if(select.selectedIndex == 3){
       const jsConfetti = new JSConfetti();
       jsConfetti.addConfetti();
     }
