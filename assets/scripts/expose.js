@@ -71,9 +71,7 @@ function init() {
     audio2.play();
     if(audio2.src == "assets/audio/party-horn.mp3"){
       const jsConfetti = new JSConfetti();
-      jsConfetti.addConfetti({
-        emojis: ['🌈', '⚡️', '💥', '✨', '💫', '🌸'],
-          });
+      jsConfetti.addConfetti();
     }
   }
   
