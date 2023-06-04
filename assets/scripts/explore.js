@@ -15,9 +15,9 @@ function init() {
       const option = document.createElement("option");
       option.textContent = `${voices[i].name} (${voices[i].lang})`;
 
-      if (voices[i].default) {
-        option.textContent += " — DEFAULT";
-      }
+      //if (voices[i].default) {
+        //option.textContent += " — DEFAULT";
+      //}
 
       option.setAttribute("data-lang", voices[i].lang);
       option.setAttribute("data-name", voices[i].name);
@@ -28,4 +28,13 @@ function init() {
   populateVoiceList();
   
   //smileyFace.addEventListener('click', getVoices);
+  
+  const button = document.getElementById("button");
+  const image = document.getElementById("img");
+  
+  function talk(){
+    image.src = "assets/images/smiling-open.png";
+    
+  }
+  
 }
