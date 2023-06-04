@@ -42,13 +42,13 @@ function init() {
     
     var iconPath = "";
     
-    if(volumeValue == 0){
+    if(volumeValue <= 0){
       iconPath = "assets/icons/volume-level-0.svg";
     } else if (volumeValue > 0 && volumeValue < 33){
       iconPath = "assets/icons/volume-level-1.svg";
     } else if(volumeValue >=33 && volumeValue < 67){
       iconPath = "assets/icons/volume-level-2.svg";
-    } else if(volumeValue >=67 && volumeValue < 100){
+    } else if(volumeValue >=67){
       iconPath = "assets/icons/volume-level-3.svg"
     } else{
       iconPath = "";
