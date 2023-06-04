@@ -42,7 +42,7 @@ function init() {
     
     var iconPath = "";
     
-    if(volume == 0){
+    if(volumeValue == 0){
       iconPath = "assets/icons/volume-level-0.svg";
     } else if (volumeValue > 0 && volumeValue < 33){
       iconPath = "assets/icons/volume-level-1.svg";
