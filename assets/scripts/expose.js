@@ -55,7 +55,7 @@ function init() {
     }
     
     icon.src = iconPath;
-    volume.value = volumeValue/100;
+    audio.volume = volumeValue/100;
     //console.log(volume.value)
     
     
